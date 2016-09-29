@@ -1,14 +1,14 @@
 {
-  "name": "{{name}}",
+  "name": "<%= name %>",
   "version": "1.0.0",
-  "description": "{{description}}",
+  "description": "<%= description %>",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack-dev-server -d --progress --colors --inline --hot --port 8080",
     "build": "NODE_ENV=production webpack -p --colors"
   },
-  "author": "{{author}}",
+  "author": "<%= author %>",
   "license": "MIT",
   "devDependencies": {
     "autoprefixer-loader": "^1.2.0",

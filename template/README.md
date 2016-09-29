@@ -1,5 +1,5 @@
-# {{name}}
->{{description}}
+# <%= name %>
+< <%=description %>
 
 ### 安装
 ```bash
