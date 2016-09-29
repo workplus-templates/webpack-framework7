@@ -1,0 +1,6 @@
+{
+    "name": "webpack-framework7",
+    "description": "A starter project for using Framework7 with Webpack via Babel!",
+    "bash": ["npm install", "npm run dev"],
+    "readme": "https://github.com/workplus-template/webpack-framework7#readme"
+}
