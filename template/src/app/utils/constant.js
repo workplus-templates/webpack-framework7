@@ -1,8 +1,7 @@
 'use strict';
 
 export default {
-   AVATAR: require('../../assets/images/01.png'),
-   SERVER_URL: 'https://cnodejs.org',
+   SERVER_URL: 'https://api.example.com',
    STATUS: {
        SUCCESS: 0
    }

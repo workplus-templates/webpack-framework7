@@ -3,12 +3,9 @@
 import Constant from './constant';
 
 export default {
-    getTopics(params) {
-        params.path = '/api/v1/topics/?page=' + params.page + '&tab=' + params.tab + '&limit=10';
-        request(params);
-    },
-    getDetailById(params) {
-        params.path = '/api/v1/topic/' + params.id;
+    // mock request function
+    getExample(params) {
+        params.path = '/api/example';
         request(params);
     }
 };

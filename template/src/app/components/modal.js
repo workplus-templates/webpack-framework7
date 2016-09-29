@@ -3,10 +3,10 @@
 export default {
     alert(text, callback){
         myApp.modal({
-            title: '提示',
+            title: 'Coustom Title',
             text,
             buttons: [{
-                text: '确定',
+                text: 'OK',
                 onClick(){
                     callback && callback();
                 }
@@ -15,12 +15,12 @@ export default {
     },
     confrim(text, callback){
         myApp.modal({
-            title: '提示',
+            title: 'Title',
             text,
             buttons: [{
-                text: '取消'
+                text: 'No'
             },{
-                text: '确定',
+                text: 'Yes',
                 onClick(){
                     callback && callback();
                 }

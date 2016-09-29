@@ -3,13 +3,13 @@
 export function showActionSheet (buttons) {
     var normalBtn = [
         {
-            text: '请选择',
+            text: 'Modals',
             label: true
         }
     ];
     var cancelBtn = [
         {
-            text: '取消',
+            text: 'Cancel',
             color: 'red'
         }
     ];

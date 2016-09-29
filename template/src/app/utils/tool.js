@@ -12,13 +12,5 @@ export default {
     },
     renderTpl(tpl, data){
         return Template7.compile(tpl)(data);
-    },
-    publishTime(date){
-        var _date = new Date(date),
-			_m = _date.getMonth() + 1,
-			_d = _date.getDate(),
-			_h = _date.getHours(),
-			_s = _date.getMinutes();
-		return _m + '月' + _d + '日 ' + _h + ':' + _s;
     }
-};
+}
