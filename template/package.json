@@ -1,5 +1,5 @@
 {
-  "name": "<%= name %>",
+  "name": "name",
   "version": "1.0.0",
   "description": "<%= description %>",
   "main": "index.js",
@@ -26,6 +26,7 @@
     "extract-text-webpack-plugin": "^0.8.2",
     "file-loader": "^0.8.4",
     "html-loader": "^0.3.0",
+    "html-webpack-plugin": "^2.22.0",
     "imports-loader": "^0.6.4",
     "less": "^2.5.1",
     "less-loader": "^2.2.0",

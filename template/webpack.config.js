@@ -2,18 +2,19 @@ var path = require('path');
 var webpack = require('webpack');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var CopyWebpackPlugin = require('copy-webpack-plugin');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
+var pkg = require('./package.json');
 var __f7Path = __dirname + '/node_modules/framework7/dist';
 
 var config = {
   // the main entry of our app
   entry: {
-      app: ['./src/app/index.js']
+    app: './src/app/index.js'
   },
   // output configuration
   output: {
-    path: __dirname + '/dist/',
-    contentBase: 'dist/',
+    path: 'dist',
     filename: 'app.js'
   },
   // f7 alias
@@ -51,19 +52,44 @@ var config = {
           allChunks: true
       }),
       new webpack.optimize.OccurrenceOrderPlugin(),
+      new webpack.HotModuleReplacementPlugin(),
+      new webpack.NoErrorsPlugin(),      
       new CopyWebpackPlugin([
-          {from: './src/index.html', to: './index.html'},
           {from: './src/page', to: './page' }
-      ])
+      ]),
+      new HtmlWebpackPlugin({
+          filename: 'index.html',
+          template: 'index.html',
+          inject: true
+      })
   ]
 };
 
 if (process.env.NODE_ENV === 'production') {
-    config.plugins.concat([
+    config.plugins.pop();
+    config.plugins = config.plugins.concat([
         new webpack.optimize.DedupePlugin(),
         new webpack.optimize.UglifyJsPlugin({
             compress: {
                 warnings: false
+            }
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'index.html',
+            template: 'index.html',
+            inject: true,
+            minify: {
+                removeComments: true,
+                collapseWhitespace: true,
+                removeAttributeQuotes: true
+            }
+        }),
+        new webpack.optimize.CommonsChunkPlugin({
+            name: 'vendor',
+            filename: 'vendor.js',
+            minChunks: function (module, count) {
+                // any required modules inside node_modules are extracted to vendor
+                return (module.resource && /\.js$/.test(module.resource) && module.resource.indexOf('/node_modules/') >= 0)
             }
         })
     ]);
