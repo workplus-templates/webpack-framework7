@@ -8,7 +8,6 @@
 * Less
 * ES6
 * Cordova
-
 * webpack
 * babel
 
@@ -55,6 +54,7 @@ npm run build
 
 代码将会打包到`dist`文件夹，可以使用workplus进入dist文件夹并启动server进行测试。
 
+### 制作者
 
-
+[Hejx](https://github.com/Alex-fun)
 
