@@ -13,8 +13,16 @@
 
 ### 安装
 
+确保已经安装workplus-cli
+
 ```bash
-workplus start webpack-framework7 my-project
+$ npm install workplus-cli -g
+```
+
+然后执行以下命令：
+
+```bash
+$ workplus start webpack-framework7 my-project
 ```
 
 安装完成后，进入项目目录，执行`npm install`
@@ -24,7 +32,7 @@ workplus start webpack-framework7 my-project
 #### a. 开发模式
 
 ```bash
-npm run dev
+$ npm run dev
 ```
 
 默认端口为8080，可通过配置package.jso文件的scripts属性来修改端口。
@@ -49,7 +57,7 @@ var config = {
 #### c. 发布
 
 ```bash
-npm run build
+$ npm run build
 ```
 
 代码将会打包到`dist`文件夹，可以使用workplus进入dist文件夹并启动server进行测试。
