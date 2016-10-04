@@ -8,8 +8,8 @@
 * Less
 * ES6
 * Cordova
-* webpack
-* babel
+* Webpack
+* Babel
 
 ### 安装
 
