@@ -62,6 +62,24 @@ $ npm run build
 
 代码将会打包到`dist`文件夹，可以使用workplus进入dist文件夹并启动server进行测试。
 
+### 警告
+
+在安卓的workplus下，此段代码会报错，请直接注释掉：**12811行-12821行**
+
+```js
+// OS classes
+// if (device.os) {
+//     classNames.push(device.os, device.os + '-' + device.osVersion.split('.')[0], device.os + '-' + device.osVersion.replace(/\./g, '-'));
+//     if (device.os === 'ios') {
+//         var major = parseInt(device.osVersion.split('.')[0], 10);
+//         for (var i = major - 1; i >= 6; i--) {
+//             classNames.push('ios-gt-' + i);
+//         }
+//     }
+
+// }
+```
+
 ### Author
 
 [Hejx](https://github.com/Alex-fun)
