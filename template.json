@@ -2,5 +2,5 @@
     "name": "webpack-framework7",
     "description": "A starter project for using Framework7 with Webpack via Babel!",
     "bash": ["npm install", "npm run dev"],
-    "readme": "https://github.com/workplus-template/webpack-framework7#readme\n\n  关于workplus安卓app上无法打开应用的问题，请看文档里警告的部分"
+    "readme": "https://github.com/workplus-template/webpack-framework7#readme\n\n  #关于workplus安卓app上无法打开应用的问题，请看文档里警告的部分#"
 }
