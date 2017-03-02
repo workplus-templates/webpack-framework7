@@ -68,6 +68,11 @@ var config = {
 if (process.env.NODE_ENV === 'production') {
     config.plugins.pop();
     config.plugins = config.plugins.concat([
+        new webpack.DefinePlugin({
+            'process.env': {
+                NODE_ENV: '"production"'
+            }
+        }),
         new webpack.optimize.DedupePlugin(),
         new webpack.optimize.UglifyJsPlugin({
             compress: {
