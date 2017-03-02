@@ -45,8 +45,10 @@ $ npm run dev
 var config = {
   ...
   devServer: {
-    '/api': {
-      target: 'http://api.example.com'
+    proxy: {
+      '/api': {
+        target: 'http://api.example.com'
+      }
     }
   }
 }
