@@ -10,7 +10,7 @@
 * Cordova
 * Webpack
 * Babel
-* Polyglot *For i18n*
+* Polyglot
 
 ### 安装
 
