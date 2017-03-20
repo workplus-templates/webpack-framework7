@@ -14,7 +14,7 @@ export default {
         this.bindEvent();
     },
     render(){
-        var tpl = Tool.renderTpl(mainHtml, {text: 'Hello Framework7'});
+        var tpl = Tool.renderTpl(mainHtml, {text: $t('main.title')});
         $('.home-page').html(tpl);
     },
     // modal

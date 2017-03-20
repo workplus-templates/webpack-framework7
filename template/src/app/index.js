@@ -7,6 +7,7 @@ import '../assets/app.less';
 
 import mainModule from './main/main';
 import Router from './router';
+import { initI18n } from './utils/i18n';
 
 var app = {
     init(){
@@ -20,6 +21,8 @@ var app = {
             domCache: true
         });
         
+        // demo default 'en' language
+        window.$t = initI18n('en');
         mainModule.init();
         Router.init();
     },
